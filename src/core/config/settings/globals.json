@@ -14,7 +14,7 @@
     },
     "serviceMocker": {
         "delayResponse": 300,
-        "isEnabled": true,
+        "isEnabled": true
     },
     "alertNotification": {
         "autoHideDuration": 5000

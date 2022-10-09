@@ -1,0 +1,22 @@
+{
+    "localStorage": {
+        "device": "localStorage",
+        "secretKey": "secret-key",
+        "isEnabled": true,
+        "key": "state",
+        "savableState": [
+            "user"
+        ],
+        "throttleWait": 1000
+    },
+    "reduxLogger": {
+        "isEnabled": true
+    },
+    "serviceMocker": {
+        "delayResponse": 300,
+        "isEnabled": true,
+    },
+    "alertNotification": {
+        "autoHideDuration": 5000
+    }
+}

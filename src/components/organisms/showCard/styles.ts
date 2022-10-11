@@ -2,6 +2,9 @@ export default {
   container: {
     maxWidth: "50%",
     width: 300,
+    padding: "12px",
+  },
+  contentCard: {
     boxShadow: "0 3px 20px rgb(0 0 0 / 10%)",
     borderRadius: "0 0 5px 5px",
   },

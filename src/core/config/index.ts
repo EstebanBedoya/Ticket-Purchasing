@@ -4,17 +4,18 @@ import language from "./text";
 import masterData from "./master-data";
 import mockData from "./mock-data";
 import settings from "./settings";
-import { getServices } from "./services";
+// import { getServices } from "./services";
+
 
 const getConfiguration = () => {
-  const servicesPlaceholders = settings.services;
-  const services = getServices(servicesPlaceholders);
+  const servicesPlaceholders = settings;
+  // const services = getServices(servicesPlaceholders);
 
   return {
     initialState,
     masterData,
     mockData,
-    services,
+    // services,
     settings,
     text: language[initialState.language as keyof typeof language],
   };

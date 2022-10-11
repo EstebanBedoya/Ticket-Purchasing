@@ -1,10 +1,9 @@
-import ShowCard from "../../components/molecules/showCard";
+import MainPage from "../../components/pages/mainPage";
 
 function App() {
   return (
     <div>
-      <h1>Hello word</h1>
-      <ShowCard />
+      <MainPage />
     </div>
   );
 }

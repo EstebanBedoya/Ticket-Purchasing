@@ -18,5 +18,6 @@
     },
     "alertNotification": {
         "autoHideDuration": 5000
-    }
+    },
+    "services": {}
 }

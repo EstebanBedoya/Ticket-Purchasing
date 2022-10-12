@@ -7,4 +7,5 @@ export interface ShowType {
   date: string;
   image: string;
   quantityTickets: number;
+  price: number;
 }

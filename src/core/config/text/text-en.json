@@ -1,6 +1,8 @@
 {
     "available": "Available",
     "notAvailable": "Not available",
-    "selectQuantity": "Select quantity",
-    "shows": "Shows"
+    "pricePerTickets": "Price per tickets",
+    "quantityTickets": "Quantity ticket",
+    "shows": "Shows",
+    "total": "Total"
 }

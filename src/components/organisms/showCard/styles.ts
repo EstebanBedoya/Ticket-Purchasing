@@ -34,8 +34,8 @@ export default {
     marginBottom: "12px",
   },
   buyButton: {
-    fontWeight: 600,
     color: "common.white",
+    fontWeight: 600,
     textTransform: "none",
   },
   placeLabel: {

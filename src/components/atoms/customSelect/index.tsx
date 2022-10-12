@@ -12,13 +12,17 @@ export interface Props {
   onChange?: (event: SelectChangeEvent) => void;
   quantity: number;
   sx?: SxProps<Theme>;
-  value?: string;
+  value?: number;
 }
 
 const CustomSelect: FC<Props> = ({ value, onChange, quantity, sx }) => {
   const items = _.range(quantity);
   return (
-    <Select onChange={onChange} value={value} sx={{ ...sx, ...styles.content }}>
+    <Select
+      onChange={onChange}
+      sx={{ ...sx, ...styles.content }}
+      value={value?.toString()}
+    >
       {items.map((item, index) => (
         <MenuItem key={index} value={item + 1}>
           {item + 1}

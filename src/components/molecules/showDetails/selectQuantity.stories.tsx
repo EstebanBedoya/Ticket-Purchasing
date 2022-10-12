@@ -15,4 +15,4 @@ const Template: Story<Props> = (args) => <SelectQuantity {...args} />;
 
 export const Default = Template.bind({});
 
-Default.args = { quantity: 10 };
+Default.args = {};

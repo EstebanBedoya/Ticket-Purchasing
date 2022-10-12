@@ -15,7 +15,7 @@ export default {
   },
   imageContent: {
     height: 220,
-    backgroundImage: "url(https://picsum.photos/200)",
+    backgroundImage: "url(https://tuboleta.com/imagenes/633b29402ebbb.png)",
     backgroundSize: "100% 100%",
   },
   titleContent: {
@@ -34,8 +34,8 @@ export default {
     marginBottom: "12px",
   },
   buyButton: {
-    fontWeight: 600,
     color: "common.white",
+    fontWeight: 600,
     textTransform: "none",
   },
   placeLabel: {

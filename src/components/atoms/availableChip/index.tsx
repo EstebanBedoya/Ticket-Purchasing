@@ -11,9 +11,9 @@ import styles from "./styles";
 
 const text = config.text;
 
-interface Props {
+export interface Props {
   isAvailable: boolean;
-  sx: SxProps<Theme> | undefined;
+  sx?: SxProps<Theme>;
 }
 
 const AvailableChip: FC<Props> = ({ isAvailable, sx }) => {

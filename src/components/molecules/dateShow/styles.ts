@@ -5,6 +5,7 @@ export default {
     fontWeight: 700,
     lineHeight: "normal",
     textAlign: "center",
+    width: "auto",
   },
   dayText: {
     color: "primary.main",

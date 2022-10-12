@@ -16,6 +16,7 @@ const colors = {
   darkGrey: "#323449",
   grey: "#6A73A0",
   black: "#2C2D3A",
+  lightGrey: "#A6A7B5",
 };
 
 type IPalette = PaletteOptions;
@@ -31,6 +32,7 @@ const theme = createTheme({
     secondary: {
       main: colors.grey,
       dark: colors.darkGrey,
+      light: colors.lightGrey,
     },
     success: {
       main: colors.green,

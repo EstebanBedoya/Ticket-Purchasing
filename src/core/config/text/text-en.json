@@ -1,4 +1,6 @@
 {
     "available": "Available",
-    "notAvailable": "Not available"
+    "notAvailable": "Not available",
+    "selectQuantity": "Select quantity",
+    "shows": "Shows"
 }

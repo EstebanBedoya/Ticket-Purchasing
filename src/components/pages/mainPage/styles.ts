@@ -2,6 +2,7 @@ export default {
   carouselContent: {
     width: "100%",
     height: 200,
+    padding: 4
   },
   titleContent: {
     height: 140,

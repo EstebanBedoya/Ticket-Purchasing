@@ -1,6 +1,5 @@
 // @packages
 import Grid from "@mui/material/Grid/Grid";
-import Typography from "@mui/material/Typography";
 import dayjs from "dayjs";
 import { FC } from "react";
 
@@ -25,7 +24,7 @@ const DateShow: FC<Props> = ({ date }) => {
   };
 
   return (
-    <Grid container direction="column" spacing={0} sx={styles.container}>
+    <Grid container item direction="column" spacing={0} sx={styles.container}>
       <Grid item>{dayOfWeek}</Grid>
       <Grid item sx={styles.dayText}>
         {day}

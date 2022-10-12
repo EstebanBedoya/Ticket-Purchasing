@@ -6,7 +6,7 @@ import { FC } from "react";
 // @styles
 import styles from "./styles";
 
-interface Props {
+export interface Props {
   date: string;
 }
 

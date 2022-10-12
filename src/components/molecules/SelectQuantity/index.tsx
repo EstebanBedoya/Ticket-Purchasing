@@ -14,8 +14,8 @@ import styles from "./styles";
 
 const text = config.text;
 
-interface Props {
-  onChange: (event: SelectChangeEvent) => void;
+export interface Props {
+  onChange?: (event: SelectChangeEvent) => void;
   quantity: number;
   value?: string;
 }

@@ -47,13 +47,13 @@ const ShowCard = () => {
             columns={10}
             container
             item
-            justifyContent="center"
+            justifyContent="space-between"
             sx={styles.bottomContent}
           >
-            <Grid item xs={4}>
+            <Grid item xs={5}>
               <DateShow date="10-10-2022" />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
               <Typography sx={styles.placeLabel}>la macarena</Typography>
               <Button
                 onClick={handleOpenModal}

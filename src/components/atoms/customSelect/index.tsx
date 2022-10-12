@@ -8,8 +8,8 @@ import { SxProps, Theme } from "@mui/material/styles";
 // @styles
 import styles from "./styles";
 
-interface Props {
-  onChange: (event: SelectChangeEvent) => void;
+export interface Props {
+  onChange?: (event: SelectChangeEvent) => void;
   quantity: number;
   sx?: SxProps<Theme>;
   value?: string;

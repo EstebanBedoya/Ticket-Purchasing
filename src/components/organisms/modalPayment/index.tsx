@@ -13,9 +13,9 @@ import { config } from "../../../core/config";
 import styles from "./styles";
 import CreditCard from "../../molecules/creditCard";
 
-interface Props {
+export interface Props {
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 const text = config.text;

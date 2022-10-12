@@ -1,8 +1,8 @@
 // @packages
-import { Meta } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 // @scripts
-import AvailableChip from ".";
+import AvailableChip, { Props } from ".";
 
 const meta: Meta = {
   title: "AvailableChip",
@@ -11,4 +11,11 @@ const meta: Meta = {
 
 export default meta;
 
-export const Default = () => <AvailableChip isAvailable={false} />;
+const Template: Story<Props> = (args) => <AvailableChip {...args} />;
+
+export const Default = Template.bind({});
+
+export const Secondary = Template.bind({});
+
+Default.args = { isAvailable: true };
+Secondary.args = { isAvailable: false };

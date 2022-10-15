@@ -1,6 +1,6 @@
 // @json
-import options from "./options.json";
+import summaryPaymentsLabels from "./summary-payment-labels.json";
 
 export default {
-  options,
+  summaryPaymentsLabels,
 };

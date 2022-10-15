@@ -5,11 +5,12 @@ import DateShow from "../../molecules/dateShow";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
+import { FC, useState } from "react";
 
 // @scripts
 import AvailableChip from "../../atoms/availableChip";
 import ModalPayment from "../modalPayment";
+import { ShowType } from "../../../utils/types";
 import { config } from "../../../core/config";
 
 // @styles
@@ -17,7 +18,11 @@ import styles from "./styles";
 
 const { text } = config;
 
-const ShowCard = () => {
+interface Props {
+  showData: ShowType;
+}
+
+const ShowCard: FC<Props> = ({ showData }) => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   const handleCloseModal = () => {
@@ -32,8 +37,17 @@ const ShowCard = () => {
     <>
       <Box sx={styles.container}>
         <Grid container item direction="column" sx={styles.contentCard}>
-          <Grid item sx={styles.imageContent}>
-            <AvailableChip isAvailable sx={styles.availableChip} />
+          <Grid
+            item
+            sx={{
+              backgroundImage: `url(${showData.image})`,
+              ...styles.imageContent,
+            }}
+          >
+            <AvailableChip
+              isAvailable={showData.available}
+              sx={styles.availableChip}
+            />
           </Grid>
           <Grid
             alignItems="center"
@@ -42,7 +56,7 @@ const ShowCard = () => {
             justifyContent="center"
             sx={styles.titleContent}
           >
-            <Typography sx={styles.title}>TITLE</Typography>
+            <Typography sx={styles.title}>{showData.showName}</Typography>
           </Grid>
           <Divider variant="middle" />
           <Grid
@@ -54,10 +68,10 @@ const ShowCard = () => {
             sx={styles.bottomContent}
           >
             <Grid item xs={5}>
-              <DateShow date="10-10-2022" />
+              <DateShow date={showData.date} />
             </Grid>
             <Grid item xs={5}>
-              <Typography sx={styles.placeLabel}>la macarena</Typography>
+              <Typography sx={styles.placeLabel}>{showData.place}</Typography>
               <Button
                 onClick={handleOpenModal}
                 size="large"
@@ -70,7 +84,11 @@ const ShowCard = () => {
           </Grid>
         </Grid>
       </Box>
-      <ModalPayment isOpen={openModal} onClose={handleCloseModal} />
+      <ModalPayment
+        isOpen={openModal}
+        onClose={handleCloseModal}
+        showData={showData}
+      />
     </>
   );
 };

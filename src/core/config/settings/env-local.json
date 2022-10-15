@@ -16,6 +16,6 @@
         ]
     },
     "services": {
-        "baseline": "http://localhost:1337/admin/"
+        "baseline": "http://localhost:5173/admin"
     }
 }

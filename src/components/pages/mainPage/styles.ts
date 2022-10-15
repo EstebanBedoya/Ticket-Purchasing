@@ -2,7 +2,7 @@ export default {
   carouselContent: {
     width: "100%",
     height: 200,
-    padding: 4
+    padding: 4,
   },
   titleContent: {
     height: 140,
@@ -10,7 +10,7 @@ export default {
     width: "100%",
   },
   titleLabel: {
-    fontSize: '2.5em',
+    fontSize: "2.5em",
     fontWeight: 700,
     color: "secondary.main",
   },
@@ -18,6 +18,5 @@ export default {
     width: 130,
     backgroundColor: "primary.main",
     height: 6,
-
-  },
+  }
 };

@@ -4,14 +4,14 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
 
-// @scripts
-
 // @styles
 import styles from "./styles";
 
-export interface Props {}
+export interface Props {
+  date: string;
+}
 
-const ShowDetails: FC<Props> = () => {
+const ShowDetails: FC<Props> = ({ date }) => {
   return (
     <Grid
       container
@@ -22,7 +22,7 @@ const ShowDetails: FC<Props> = () => {
     >
       <Grid container item justifyContent="space-between">
         <Typography sx={styles.titleLabel}>ShowName</Typography>
-        <DateShow date="10-10-2022" />
+        <DateShow date={date} />
       </Grid>
     </Grid>
   );

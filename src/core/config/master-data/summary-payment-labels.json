@@ -1,0 +1,7 @@
+[
+    {"label": "place", "value": "place"},
+    {"label": "show date", "value": "showDate"},
+    {"label": "quantity tickets", "value": "quantityTickets"},
+    {"label": "transaction value", "value": "transactionValue"},
+    {"label":"transaction date", "value": "transactionDate"}
+]

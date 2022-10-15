@@ -15,11 +15,11 @@ export default {
   },
   imageContent: {
     height: 220,
-    backgroundImage: "url(https://tuboleta.com/imagenes/633b29402ebbb.png)",
     backgroundSize: "100% 100%",
   },
   titleContent: {
     height: 40,
+    padding: "5px",
   },
   title: {
     color: "secondary.main",
@@ -41,5 +41,8 @@ export default {
   placeLabel: {
     color: "secondary.main",
     fontSize: 17,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
   },
 };

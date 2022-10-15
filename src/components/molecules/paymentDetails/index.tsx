@@ -15,12 +15,19 @@ const text = config.text;
 
 export interface Props {
   priceTicket: number;
+  quantityTickets: number;
+  setQuantityTickets: (param: number) => void;
+  total: number;
+  setTotal: (param: number) => void;
 }
 
-const PaymentDetails: FC<Props> = ({ priceTicket }) => {
-  const [quantityTickets, setQuantityTickets] = useState<number>(1);
-  const [total, setTotal] = useState<number>(0);
-
+const PaymentDetails: FC<Props> = ({
+  priceTicket,
+  quantityTickets,
+  setQuantityTickets,
+  setTotal,
+  total,
+}) => {
   useEffect(() => {
     setTotal(priceTicket * quantityTickets);
   }, [quantityTickets]);

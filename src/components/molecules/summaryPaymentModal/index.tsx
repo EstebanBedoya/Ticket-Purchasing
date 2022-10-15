@@ -2,18 +2,22 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FC } from "react";
+import { Typography } from "@mui/material";
 
 // @scripts
+import { CardData, ShowType } from "../../../utils/types";
 import { config } from "../../../core/config";
-import { CardData } from "../../../utils/types";
 
 // @styles
 import styles from "./styles";
-import { Typography } from "@mui/material";
+import dayjs from "dayjs";
 
 export interface Props {
   isOpen: boolean;
   onClose?: () => void;
+  quantityTickets: number;
+  showData: ShowType;
+  totalPrice: number;
 }
 
 const initCardData: CardData = {
@@ -23,21 +27,45 @@ const initCardData: CardData = {
   expiry: "",
 };
 
-const SummaryPaymentModal: FC<Props> = ({ isOpen, onClose }) => {
+interface summaryModel {
+  place: string;
+  showDate: string;
+  quantityTickets: number;
+  transactionValue: number;
+  transactionDate: string;
+}
+
+const SummaryPaymentModal: FC<Props> = ({
+  isOpen,
+  onClose,
+  quantityTickets,
+  showData,
+  totalPrice,
+}) => {
   if (!isOpen) {
     return null;
   }
+
+  const summary: summaryModel = {
+    place: showData.place,
+    showDate: showData.date,
+    quantityTickets,
+    transactionValue: totalPrice,
+    transactionDate: dayjs().format("MM-DD-YYYY"),
+  };
 
   return (
     <Modal open={isOpen} onClose={onClose}>
       <Box sx={styles.boxStyle}>
         <Typography sx={styles.titleLabel}>tanks title</Typography>
         <Typography sx={styles.showNameLabel}>show name</Typography>
-        <Typography sx={styles.label}>place: place</Typography>
-        <Typography sx={styles.label}>show date: 20/12/2022</Typography>
-        <Typography sx={styles.label}>quantity tickets</Typography>
-        <Typography sx={styles.label}>transaction value: $200</Typography>
-        <Typography sx={styles.label}>transaction data: 12/12/2022</Typography>
+        {config.masterData.summaryPaymentsLabels.map(
+          (item: any, index: number) => (
+            <Typography key={index} sx={styles.label}>{`${item.label}: ${
+              summary[item.value as keyof typeof summary]
+            }`}</Typography>
+          )
+        )}
       </Box>
     </Modal>
   );

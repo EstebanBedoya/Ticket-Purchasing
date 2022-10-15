@@ -6,7 +6,7 @@ export default {
     bgcolor: "common.white",
     borderRadius: "5px",
     boxShadow: 24,
-    height: "60vh",
+    height: "70vh",
     left: "50%",
     padding: "8px",
     position: "absolute" as "absolute",

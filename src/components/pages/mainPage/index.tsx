@@ -26,18 +26,9 @@ const MainPage = () => {
           </Grid>
         </Grid>
         <Grid alignItems="center" container item justifyContent="center">
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
-          <ShowCard />
+          {Array.from({ length: 10 }).map(() => (
+            <ShowCard />
+          ))}
         </Grid>
       </Grid>
     </Grid>

@@ -1,18 +1,25 @@
 // @packages
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FC, useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Cards, { Focused } from "react-credit-cards";
-import Input from "@mui/material/Input";
+
+// @scripts
+import Input from "../../atoms/inputField";
+import { CardData } from "../../../utils/types";
 
 // @styles
 import "react-credit-cards/es/styles-compiled.css";
 import styles from "./styles";
 
-const CreditCard = () => {
+export interface Props {
+  setCardData: ({ cvc, expiry, name, number }: CardData) => void;
+}
+
+const CreditCard: FC<Props> = ({ setCardData }) => {
   const [cvc, setCvc] = useState<string | number>("");
   const [expiry, setExpiry] = useState<string | number>("");
   const [focus, setFocus] = useState<Focused | undefined>();
-  const [name, setName] = useState<string>("");
+  const [name, setName] = useState<string | number>("");
   const [number, setNumber] = useState<string | number>("");
 
   const handleFocus = (
@@ -21,11 +28,15 @@ const CreditCard = () => {
     setFocus(event.target.name as Focused);
   };
 
+  useEffect(() => {
+    setCardData({ cvc, expiry, name, number });
+  }, [cvc, expiry, name, number]);
+
   return (
     <>
       <Cards
         number={number}
-        name={name}
+        name={name.toString()}
         expiry={expiry}
         cvc={cvc}
         focused={focus}
@@ -33,10 +44,10 @@ const CreditCard = () => {
       <Grid container spacing={1} sx={styles.inputsContent}>
         <Grid item xs={12}>
           <Input
-            disableUnderline
-            fullWidth
+            maxLength={16}
+            minLength={16}
             name="number"
-            onChange={(e) => setNumber(e.target.value)}
+            onChange={setNumber}
             onFocus={handleFocus}
             placeholder="Card Number"
             sx={styles.input}
@@ -46,10 +57,8 @@ const CreditCard = () => {
         </Grid>
         <Grid item xs={12}>
           <Input
-            disableUnderline
-            fullWidth
             name="name"
-            onChange={(e) => setName(e.target.value)}
+            onChange={setName}
             onFocus={handleFocus}
             placeholder="Name"
             sx={styles.input}
@@ -59,23 +68,23 @@ const CreditCard = () => {
         </Grid>
         <Grid item xs={4}>
           <Input
-            disableUnderline
-            fullWidth
+            maxLength={4}
+            minLength={4}
             name="expiry"
-            onChange={(e) => setExpiry(e.target.value)}
+            onChange={setExpiry}
             onFocus={handleFocus}
-            placeholder="MM/YY"
+            placeholder="MMYY"
             sx={styles.input}
-            type="text"
+            type="tel"
             value={expiry}
           />
         </Grid>
         <Grid item xs={4}>
           <Input
-            disableUnderline
-            fullWidth
+            maxLength={3}
+            minLength={3}
             name="cvc"
-            onChange={(e) => setCvc(e.target.value)}
+            onChange={setCvc}
             onFocus={handleFocus}
             placeholder="CVC"
             sx={styles.input}

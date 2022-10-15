@@ -1,1 +1,92 @@
-{}
+[
+    {
+       "showName":"THE JUANPIS LIVE SHOW",
+       "available":true,
+       "place":"Teatro Tolima",
+       "date":"10-22-2022",
+       "image":"https://tuboleta.com/imagenes/633b29402ebbb.png",
+       "quantityTickets":1000,
+       "price":70000
+    },
+    {
+       "showName":"LA SINFONÍA DE LOS BICHOS RAROS",
+       "available":true,
+       "place":"Teatro El Ensueño",
+       "date":"10-30-2022",
+       "image":"https://tuboleta.com/imagenes/6349c5af4a2de.png",
+       "quantityTickets":5000,
+       "price":5000
+    },
+    {
+       "showName":"RATÓN PÉREZ EL MUSICAL",
+       "available":true,
+       "place":"Teatro La Enseñanza",
+       "date":"10-29-2022",
+       "image":"https://tuboleta.com/imagenes/6329cee1b174b.png",
+       "quantityTickets":10000,
+       "price":40000
+    },
+    {
+       "showName":"VICENTICO",
+       "available":true,
+       "place":"Movistar Arena",
+       "date":"11-02-2022",
+       "image":"https://tuboleta.com/imagenes/632896769cdb6.png",
+       "quantityTickets":100000,
+       "price":50000
+    },
+    {
+       "showName":"BUENA VIBRA TOUR",
+       "available":true,
+       "place":"Movistar Arena",
+       "date":"11-04-2022",
+       "image":"https://tuboleta.com/imagenes/631233273cd87.jpg",
+       "quantityTickets":100000,
+       "price":85000
+    },
+    {
+       "showName":"DELIRIO - BOGOTÁ",
+       "available":true,
+       "place":"Movistar Arena",
+       "date":"11-12-2022",
+       "image":"https://tuboleta.com/imagenes/633617a6582b4.png",
+       "quantityTickets":100000,
+       "price":55000
+    },
+    {
+       "showName":"ANTOLOGIA DE LA ZARZUELA",
+       "available":true,
+       "place":"Teatro Gimnasio Moderno",
+       "date":"11-06-2022",
+       "image":"https://tuboleta.com/imagenes/63383fd1ccd5d.jpg",
+       "quantityTickets":8000,
+       "price":60000
+    },
+    {
+       "showName":"VINO AL PARQUE",
+       "available":true,
+       "place":"Museo del chicó",
+       "date":"10-28-2022",
+       "image":"https://tuboleta.com/imagenes/6307eaec059b1.png",
+       "quantityTickets":5000,
+       "price":90000
+    },
+    {
+       "showName":"CUARTETO DE NOS",
+       "available":true,
+       "place":"Movistar Arena",
+       "date":"10-14-2022",
+       "image":"https://tuboleta.com/imagenes/628d10022a4c6.jpg",
+       "quantityTickets":100000,
+       "price":70000
+    },
+    {
+       "showName":"ORQUESTA FILARMÓNICA DE BOGOTÁ",
+       "available":true,
+       "place":"Teatro Tolima",
+       "date":"10-14-2022",
+       "image":"https://tuboleta.com/imagenes/633341d0a519d.png",
+       "quantityTickets":15000,
+       "price":95000
+    }
+]

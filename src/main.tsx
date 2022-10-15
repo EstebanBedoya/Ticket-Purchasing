@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { ThemeProvider } from '@mui/material/styles';
-import { store } from "./core/store";
+import { store } from "./core";
 
 // @scripts
 import App from "./core/app";

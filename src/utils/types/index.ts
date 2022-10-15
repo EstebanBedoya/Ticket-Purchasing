@@ -1,12 +1,12 @@
 export type Services = Record<string, string>;
 export interface ShowType {
-  showName: string;
   available: boolean;
-  place: string;
   date: string;
   image: string;
-  quantityTickets: number;
+  place: string;
   price: number;
+  quantityTickets: number;
+  showName: string;
 }
 
 export interface CardData {

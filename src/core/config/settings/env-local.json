@@ -1,1 +1,21 @@
-{}
+{
+    "environment": {
+        "name": "unitTest"
+    },
+    "localStorage": {
+        "isEnabled": false
+    },
+    "reduxLogger": {
+        "isEnabled": false
+    },
+    "serviceMocker": {
+        "delayResponse": 0,
+        "isEnabled": true,
+        "include": [
+            "mockGetShows"
+        ]
+    },
+    "services": {
+        "baseline": "http://localhost:1337/admin/"
+    }
+}

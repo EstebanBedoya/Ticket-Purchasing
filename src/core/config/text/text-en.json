@@ -1,6 +1,8 @@
 {
     "available": "Available",
+    "buyTicket": "Buy ticket",
     "notAvailable": "Not available",
+    "placeOrder": "Place Order",
     "pricePerTickets": "Price per tickets",
     "quantityTickets": "Quantity ticket",
     "shows": "Shows",

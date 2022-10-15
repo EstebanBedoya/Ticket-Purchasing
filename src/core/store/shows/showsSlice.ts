@@ -21,5 +21,4 @@ export const showsSlice = createSlice({
 
 export const { setShows } = showsSlice.actions;
 
-
 export default showsSlice.reducer;

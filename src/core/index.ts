@@ -1,14 +1,14 @@
 // @scripts
-import { store as reduxStore} from './store';
-import { initializeServiceMocker } from './service-mocker';
-import { addAjaxInterceptors } from './ajax-interceptors';
+import { store as reduxStore } from "./store";
+import { initializeServiceMocker } from "./service-mocker";
+import { addAjaxInterceptors } from "./ajax-interceptors";
 
 const initializeApp = () => {
   const serviceMocker = initializeServiceMocker();
   addAjaxInterceptors();
   globalThis.core = {
     store: reduxStore,
-    serviceMocker
+    serviceMocker,
   };
 
   return globalThis.core;

@@ -9,7 +9,7 @@ export default {
     height: "70vh",
     left: "50%",
     padding: "8px",
-    position: "absolute" as "absolute",
+    position: "absolute" as const,
     top: "50%",
     transform: "translate(-50%, -50%)",
     width: "60vw",

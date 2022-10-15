@@ -16,5 +16,5 @@ const Template: Story<Props> = (args) => <PaymentDetails {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-    priceTicket: 150,
+  priceTicket: 150,
 };

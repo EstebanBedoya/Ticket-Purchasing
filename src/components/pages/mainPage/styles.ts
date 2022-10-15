@@ -18,5 +18,5 @@ export default {
     width: 130,
     backgroundColor: "primary.main",
     height: 6,
-  }
+  },
 };

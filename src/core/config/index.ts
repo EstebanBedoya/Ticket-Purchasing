@@ -6,7 +6,6 @@ import mockData from "./mock-data";
 import settings from "./settings";
 import { getServices } from "./services";
 
-
 const getConfiguration = () => {
   const servicesPlaceholders = settings.services;
   const services = getServices(servicesPlaceholders);

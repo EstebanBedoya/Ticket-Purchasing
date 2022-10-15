@@ -1,12 +1,12 @@
 // @packages
-import axios from 'axios';
+import axios from "axios";
 
 const addRequestInterceptors = () => {
   axios.interceptors.request.use(
     (request) => {
       request.headers = request.headers ?? {};
 
-      request.headers['Content-Type'] = 'application/json';
+      request.headers["Content-Type"] = "application/json";
 
       return request;
     },

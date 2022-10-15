@@ -7,6 +7,6 @@ import AvailableChip from ".";
 describe("<AvailableChip />", () => {
   test("clicking to the ExampleButton", () => {
     render(<AvailableChip isAvailable />);
-    screen.getByText(/available/i)
+    screen.getByText(/available/i);
   });
 });

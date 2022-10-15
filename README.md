@@ -25,6 +25,7 @@ The project's local dependencies are located in the package.json file and are au
 ### Run project in local mode
 * To run the project in development mode: `npm run dev`
 * To generate the production build: `npm run build`
+* To run the storybooy: `npm run storubook`
 * To run the unit tests: `npm run test`
 
 ## Folder and File Structure

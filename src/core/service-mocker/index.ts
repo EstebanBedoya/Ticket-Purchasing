@@ -3,8 +3,8 @@ import MockAdapter from "axios-mock-adapter";
 import axios from "axios";
 
 // @scripts
-import { config } from "./config";
-import { createMockResponse, getMockParams, format } from "../utils";
+import { config } from "../config";
+import { createMockResponse } from "../../utils/mock";
 
 // @constants
 const httpCodes = {
@@ -24,7 +24,7 @@ const mockedServices = {
   },
 };
 
-export const initializeServiceMocker = (store: any) => {
+export const initializeServiceMocker = () => {
   const mockAdapter = new MockAdapter(axios, {
     delayResponse: config.settings.serviceMocker.delayResponse,
   });
@@ -32,8 +32,8 @@ export const initializeServiceMocker = (store: any) => {
     replyWithMockData: () => {
       const include = config.settings.serviceMocker.include || [];
       Object.keys(mockedServices).forEach((name) => {
-        if (include.some((item) => item === name)) {
-          mockedServices[name](mockAdapter, store);
+        if (include.some((item: string) => item === name)) {
+          mockedServices[name as keyof typeof mockedServices](mockAdapter);
         }
       });
       mockAdapter.onAny().passThrough();

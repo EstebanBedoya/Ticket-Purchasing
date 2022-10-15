@@ -14,7 +14,7 @@ export const getMockParams = (call: any) => {
   return params;
 };
 
-export const createMockResponse = ({ data = null, httpCode = 200 }) => [
+export const createMockResponse = ({ data = {}, httpCode = 200 }) => [
   httpCode,
   data,
 ];

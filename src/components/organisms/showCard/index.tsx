@@ -1,4 +1,5 @@
 // @packages
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import DateShow from "../../molecules/dateShow";
 import Divider from "@mui/material/Divider";
@@ -8,11 +9,13 @@ import { useState } from "react";
 
 // @scripts
 import AvailableChip from "../../atoms/availableChip";
+import ModalPayment from "../modalPayment";
+import { config } from "../../../core/config";
 
 // @styles
 import styles from "./styles";
-import ModalPayment from "../modalPayment";
-import Box from "@mui/material/Box";
+
+const { text } = config;
 
 const ShowCard = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
@@ -61,7 +64,7 @@ const ShowCard = () => {
                 sx={styles.buyButton}
                 variant="contained"
               >
-                Buy Ticket
+                {text.buyTicket}
               </Button>
             </Grid>
           </Grid>

@@ -1,5 +1,4 @@
 export type Services = Record<string, string>;
-
 export interface ShowType {
   available: boolean;
   date: string;
@@ -8,4 +7,11 @@ export interface ShowType {
   price: number;
   quantityTickets: number;
   showName: string;
+}
+
+export interface CardData {
+  name: string | number;
+  expiry: string | number;
+  cvc: string | number;
+  number: string | number;
 }

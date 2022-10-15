@@ -2,29 +2,52 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Modal from "@mui/material/Modal";
-import { FC } from "react";
+import { FC, useState } from "react";
 import Button from "@mui/material/Button";
 
 // @scripts
 import CreditCard from "../../molecules/creditCard";
 import PaymentDetails from "../../molecules/paymentDetails";
 import ShowDetails from "../../molecules/showDetails";
+import SummaryPaymentModal from "../../molecules/summaryPaymentModal";
+import { CardData } from "../../../utils/types";
 import { config } from "../../../core/config";
+import { validateCardData } from "../../../utils/payment";
 
 // @styles
 import styles from "./styles";
 
 export interface Props {
   isOpen: boolean;
-  onClose?: () => void;
+  onClose: () => void;
 }
 
 const text = config.text;
 
+const initCardData: CardData = {
+  name: "",
+  number: "",
+  cvc: "",
+  expiry: "",
+};
+
 const ModalPayment: FC<Props> = ({ isOpen, onClose }) => {
+  const [cardData, setCardData] = useState<CardData>(initCardData);
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
   if (!isOpen) {
     return null;
   }
+
+  const handelClick = () => {
+    setOpenModal(true);
+    console.log(validateCardData(cardData));
+  };
+
+  const onClosePaymentModal = () => {
+    setOpenModal(false);
+    onClose();
+  };
 
   return (
     <Modal open={isOpen} onClose={onClose}>
@@ -47,18 +70,20 @@ const ModalPayment: FC<Props> = ({ isOpen, onClose }) => {
               justifyContent="space-between"
               sx={styles.borderSolid}
             >
-              <CreditCard />
+              <CreditCard setCardData={setCardData} />
               <Button
                 color="success"
                 fullWidth
-                variant="contained"
+                onClick={handelClick}
                 sx={styles.button}
+                variant="contained"
               >
-                Place Order
+                {text.placeOrder}
               </Button>
             </Grid>
           </Grid>
         </Grid>
+        <SummaryPaymentModal isOpen={openModal} onClose={onClosePaymentModal} />
       </Box>
     </Modal>
   );

@@ -10,7 +10,7 @@ const middleware = [thunk, logger];
 
 export const store = configureStore({
   reducer: {
-    shows: showsReducer,
+    schedules: showsReducer,
   },
   middleware,
   devTools: true,
